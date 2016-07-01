@@ -1,0 +1,110 @@
+@font-face {
+  font-family: larke;
+  src: url("../fonts/LarkeNeueThin.ttf");
+}
+
+@font-face {
+  font-family: Bebas;
+  src: url("../fonts/BebasNeue.otf");
+}
+
+body {
+  box-sixing: border-box;
+  font-family: larke;
+  font-size: 14px;
+  margin: auto;
+  color: #000;
+}
+
+header {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  height: 600px;
+  background: url('../images/ref1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#nav {
+  float: left;
+}
+
+#nav ul {
+  list-style-type: none;
+  display: inline-block!important;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#nav li {
+  float: none;
+  display: inline-block!important;
+  margin: 13px;
+}
+
+#nav li::after {
+  content: url('../images/chev2.png');
+  position: absolute;
+  color: #000;
+  padding-left: 3px;
+}
+
+#nav li:hover::after {
+  transform: rotate(180deg);
+  margin-left: 4px;
+  margin-bottom: 9px;
+}
+
+#icons {
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  font-family: Bebas;
+  margin: auto;
+  padding-top: 15px;
+  width: 100px;
+  font-size: 36px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  margin: auto;
+  width: 90%;
+}
+
+#center {
+  font-weight: bold;
+  font-family: 'helvetica neue';
+  text-align: center;
+}
+
+#features {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.main p {
+  font-size: 12px;
+}
+
+#features li {
+  margin: 10px;
+}
+
+button {
+  box-shadow: none;
+  border-radius: 0px;
+  border: 1px solid #000;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
