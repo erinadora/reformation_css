@@ -20,14 +20,11 @@
 45% { left: -100%; }
 50% { left: -200%; }
 70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
+75% { left: -100%; }
+95% { left: -100%; }
+100% { left: 0%; }
 }
 
-body {
-  margin: 0;
-}
 header#slider {
   overflow: hidden;
   height: 620px;
@@ -53,7 +50,7 @@ body {
   box-sixing: border-box;
   font-family: Neuzeit;
   font-size: 14px;
-  margin: auto;
+  margin: 0 auto;
   color: #000;
 }
 
@@ -142,11 +139,11 @@ a {
 }
 
 .main {
-  margin: 0 auto;
+  margin: auto;
   width: 75%;
   margin-left: 14%;
   height: 100%;
-  padding-bottom: 50px;
+  margin-bottom: 250px!important;
 }
 
 #center {
@@ -212,7 +209,7 @@ button:hover {
 
 .infogra {
   display: block;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
   clear: both;
 }
 
@@ -364,4 +361,46 @@ select {
 
 select:focus {
   outline: none;
+}
+
+#also {
+  margin: auto;
+  width: 100%;
+  bottom: 150px!important;
+}
+
+#oh {
+  text-align: center;
+}
+
+#imgleft {
+  float: left;
+}
+
+#imgleft img {
+  width: 450px;
+  margin: 10px;
+  display: block;
+}
+
+#imgleft p {
+  display: block;
+  text-align: center;
+  line-height: 140%;
+}
+
+#imgright {
+  float: right;
+  margin: 10px;
+  display: block;
+}
+
+#imgright img {
+  width: 450px;
+}
+
+#imgright p {
+  display: block;
+  text-align: center;
+  line-height: 140%;
 }
