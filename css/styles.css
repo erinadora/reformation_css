@@ -112,7 +112,7 @@ header {
 #icons {
   float: right;
   width: 200px;
-  margin: 15px auto;
+  margin: 20px auto;
   display: inline-block;
 }
 
@@ -142,10 +142,11 @@ a {
 }
 
 .main {
-  margin: auto;
+  margin: 0 auto;
   width: 75%;
+  margin-left: 14%;
   height: 100%;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 #center {
