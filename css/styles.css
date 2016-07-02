@@ -1,6 +1,6 @@
 @font-face {
-  font-family: larke;
-  src: url("../fonts/LarkeNeueThin.ttf");
+  font-family: lato;
+  src: url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
@@ -8,9 +8,14 @@
   src: url("../fonts/BebasNeue.otf");
 }
 
+@font-face {
+  font-family: Neuzeit;
+  src: url("../fonts/Neuzeit_S_LT_Book.ttf");
+}
+
 body {
   box-sixing: border-box;
-  font-family: larke;
+  font-family: Neuzeit;
   font-size: 14px;
   margin: auto;
   color: #000;
@@ -25,7 +30,17 @@ header {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
+}
+
+.top {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  height: 70px;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0px -1px 8px 2px #ccc;
 }
 
 #nav {
@@ -75,11 +90,14 @@ h1 {
   text-align: center;
   font-family: Bebas;
   margin: 15px auto;
-  /*width: 100px;*/
   font-size: 36px;
   display: inline-block;
-  margin-right: 125px;
-  /*margin-right: 100px;*/
+  margin-right: 135px;
+}
+
+h3 {
+  font-family: lato!important;
+  font-weight: bold!important;
 }
 
 a {
@@ -90,17 +108,25 @@ a {
 .main {
   margin: auto;
   width: 90%;
+  height: 100%;
 }
 
 #center {
-  font-weight: bold;
-  font-family: 'helvetica neue';
+  font-weight: 600;
+  font-family: lato;
   text-align: center;
+  margin: 45px auto;
 }
 
 #features {
   list-style-type: none;
-  font-size: 15px;
+  font-size: 13px;
+  letter-spacing: .5px;
+  line-height: 22px;
+}
+
+.main {
+  color: #292929;
 }
 
 .main p {
@@ -115,7 +141,112 @@ button {
   box-shadow: none;
   border-radius: 0px;
   border: 1px solid #000;
-  padding: 15px;
+  padding: 10px;
+  font-size: 13px;
+  letter-spacing: .5px;
   text-align: center;
+  width: 190px;
+  margin-top: 30px;
   background-color: #fff;
+}
+
+button:hover {
+  color: #999;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  width: 50%:
+  display: inline-block;
+}
+
+.right {
+  float: right;
+  width: 500px;
+  display: inline-block;
+}
+
+#fab {
+  width: 90%;
+}
+
+.infogra {
+  display: block;
+  margin-bottom: 130px;
+  clear: both;
+}
+
+#one, #two, #three {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  line-height: .5%;
+  font-size: 12px;
+}
+
+.ico {
+  width: 30px;
+  margin: 10px auto;
+}
+
+footer {
+  padding: 10px;
+  width: 100%;
+  padding-bottom: 15px;
+  bottom: 0px;
+  left: 0px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  height: 80px;
+  margin: 0 auto;
+  position: fixed;
+  background-color: #F3F3F3;
+}
+
+footer p {
+  word-spacing: 0px;
+}
+
+#footleft {
+  width: 50%;
+  margin: 0 auto;
+  float: left;
+  margin-left: 30px;
+}
+
+#footright {
+  float: right;
+  display: inline-block;
+  width: 300px;
+}
+
+#price {
+  font-weight: 100;
+  font-family: avenir;
+}
+
+.name h3{
+  letter-spacing: 2px!important;
+}
+
+#red {
+  position: absolute;
+  top:0px;
+}
+
+#buy {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: lato;
+  margin: 15px;
+  border: 1px solid #000;
+}
+
+#buy:hover {
+  background-color: #ccc;
+  border: 1px solid #ccc;
 }

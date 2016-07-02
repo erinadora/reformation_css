@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/x-icon" href="images/reflog.ico" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>LINNEA DRESS - Reformation</title>
   </head>
   <body>
     <header>
-      <ul id="nav">
-        <a href="#"><li>New</li></a>
-        <a href="#"><li>Clothes</li></a>
-        <a href="#"><li>Stories</li></a>
-        <a href="#"><li>Who we are</li></a>
-      </ul>
-      <h1>Reformation</h1>
-      <div id="icons">
-        <img src="images/search.png">
-        <img src="images/bag.png">
-        <img src="images/hamby.png">
+      <div class="top">
+        <ul id="nav">
+          <a href="#"><li>New</li></a>
+          <a href="#"><li>Clothes</li></a>
+          <a href="#"><li>Stories</li></a>
+          <a href="#"><li>Who we are</li></a>
+        </ul>
+        <h1>Reformation</h1>
+        <div id="icons">
+          <img src="images/search.png">
+          <img id="buyit" src="images/bag.png">
+          <img src="images/hamby.png">
+        </div>
+      </div>
+      <div class="reg">
+        <ul id="nav">
+          <a href="#"><li>New</li></a>
+          <a href="#"><li>Clothes</li></a>
+          <a href="#"><li>Stories</li></a>
+          <a href="#"><li>Who we are</li></a>
+        </ul>
+        <a href="#"><h1>Reformation</h1></a>
+        <div id="icons">
+          <a href=""><img src="images/search.png"></a>
+          <a href=""><img src="images/bag.png"></a>
+          <a href=""><img src="images/hamby.png"></a>
+        </div>
       </div>
     </header>
     <div class="main">
@@ -36,39 +53,72 @@
       </div>
       <div class="right">
         <h3>Fabric swatch</h3>
-        <img src="">
+        <img id="fab" src="images/fabswatch.jpg">
       </div>
 
-      <h3>RefScale</h3>
+      <div class="infogra">
+          <h3>RefScale</h3>
 
-      <div id="one">
-        <img src="">
-        <br><p>Carbon dioxide savings</p>
-        <br><p>10 lbs.</p>
-      </div>
+          <div id="one">
+            <img class="ico" src="images/cloud.png">
+            <br><p>Carbon dioxide savings</p>
+            <br><p>10 lbs.</p>
+          </div>
 
-      <div id="two">
-        <img src="">
-        <br><p>Water savings</p>
-        <br><p>844 gal.</p>
-      </div>
+          <div id="two">
+            <img class="ico" src="images/water.png">
+            <br><p>Water savings</p>
+            <br><p>844 gal.</p>
+          </div>
 
-      <div id="three">
-        <img src="">
-        <br><p>Waste savings</p>
-        <br><p>1.2 lbs.</p>
+          <div id="three">
+            <img class="ico" src="images/trash.png">
+            <br><p>Waste savings</p>
+            <br><p>1.2 lbs.</p>
+          </div>
+        </div>
       </div>
-    </div>
     <footer>
-      <h3>Linnea Dress <span id="price">$98</span></h3>
-      <p>Free worldwide shipping and free US returns</p>
-      <select>
-        <option value="0">0</option>
-        <option value="2">2</option>
-        <option value="4">4</option>
-        <option value="6">6</option>
-      </select>
-      <button id="buy">Add to bag</button>
+      <div id="footleft">
+        <h3 class="name">Linnea Dress <span id="price">$98</span></h3>
+        <p>Free worldwide shipping and free US returns</p>
+      </div>
+      <div id="footright">
+        <select>
+          <option>Size</option>
+          <option value="0">0</option>
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+        </select>
+        <button id="buy">Add to bag</button>
+      </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 40)
+                {
+                  $('.top').fadeIn(500);
+                } else {
+                  $('.top').fadeOut(500);
+                }
+            });
+
+            // $(window).scroll(function(){
+            //     if ($(this).scrollTop() > 39)
+            //     {
+            //       $('.reg').fadeOut(500);
+            //     }
+            // });
+
+            $('#buy').click(function(){
+              $('#buyit').append($('<img>',{id:'red',src:'images/red.png'}))
+          });
+        });
+    })(jQuery);
+    </script>
   </body>
 </html>
