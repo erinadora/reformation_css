@@ -13,6 +13,42 @@
   src: url("../fonts/Neuzeit_S_LT_Book.ttf");
 }
 
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body {
+  margin: 0;
+}
+header#slider {
+  overflow: hidden;
+  height: 620px;
+}
+
+header#slider figure img {
+  width: 20%;
+  float: left;
+}
+header#slider figure {
+  position: absolute;
+  width: 500%;
+  margin: 0;
+  z-index: -1;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slidy infinite;
+
+}
+
 body {
   box-sixing: border-box;
   font-family: Neuzeit;
@@ -26,11 +62,11 @@ header {
   width: 100%;
   text-align: center;
   height: 620px;
-  background: url('../images/ref1.jpg');
+  /*background: url('../images/ref1.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
 }
 
 .top {
@@ -107,8 +143,9 @@ a {
 
 .main {
   margin: auto;
-  width: 90%;
+  width: 75%;
   height: 100%;
+  margin-bottom: 50px;
 }
 
 #center {
@@ -174,16 +211,23 @@ button:hover {
 
 .infogra {
   display: block;
-  margin-bottom: 130px;
+  margin-bottom: 150px;
   clear: both;
 }
 
 #one, #two, #three {
   display: inline-block;
-  padding: 10px;
   text-align: center;
   line-height: .5%;
   font-size: 12px;
+}
+
+#one, #two {
+  padding-right: 25px;
+}
+
+#three, #two {
+  padding-left: 25px;
 }
 
 .ico {
@@ -192,17 +236,23 @@ button:hover {
 }
 
 footer {
-  padding: 10px;
+  /*padding: 45px;*/
   width: 100%;
   padding-bottom: 15px;
   bottom: 0px;
   left: 0px;
   letter-spacing: 1px;
   word-spacing: 2px;
-  height: 80px;
+  height: 130px;
   margin: 0 auto;
   position: fixed;
   background-color: #F3F3F3;
+}
+
+#ftmain {
+  width: 78%;
+  padding-top: 30px!important;
+  margin: 0 auto;
 }
 
 footer p {
@@ -210,7 +260,7 @@ footer p {
 }
 
 #footleft {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   float: left;
   margin-left: 30px;
@@ -219,7 +269,7 @@ footer p {
 #footright {
   float: right;
   display: inline-block;
-  width: 300px;
+  width: 35%;
 }
 
 #price {
@@ -249,4 +299,68 @@ footer p {
 #buy:hover {
   background-color: #ccc;
   border: 1px solid #ccc;
+}
+
+td {
+  display: table-cell;
+}
+
+#ones, #twos, #threes {
+  width: 400px;
+  height: 150px;
+  display: none;
+  position: absolute;
+  left: 165px!important;
+  line-height: 140%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+#one:hover {
+  cursor: pointer;
+  color: #999;
+}
+
+#one:hover + #ones {
+  display: table-caption;
+  margin-bottom: 20px;
+
+}
+
+#two:hover {
+  cursor: pointer;
+  color: #999;
+}
+
+#two:hover + #twos {
+  display: table-caption;
+  margin-bottom: 20px;
+}
+
+#three:hover {
+  cursor: pointer;
+  color: #999;
+}
+
+#three:hover + #threes {
+  display: block;
+  margin-bottom: 20px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-family: Neuzeit;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
 }
